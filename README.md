@@ -1,3 +1,3 @@
 # Personal Website made by Kada Williams
 
-$\sum_{i=1}^n$
+$ \sum_{i=1}^n $
