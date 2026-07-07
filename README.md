@@ -1,7 +1,7 @@
---
+---
 layout: default
 title: main
---
+---
 
 # Personal Website made by Kada Williams
 
