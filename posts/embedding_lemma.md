@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 *Lemma.* Let $H$ be an $r$-partite graph with vertex classes $V_1,\ldots,V_r$ of size $an$. Suppose that if $U,U'$ include $\ge \alpha an$ vertices from two different vertex classes, then $\ge \varepsilon$ of the edges between $U$ and $U'$ occur in $E(H)$. 
 
 Provided $G$ is an $n$-vertex graph with $\varepsilon^l-(\Delta-l)\alpha\ge \frac1a$ for all $0\le l\le \Delta=\Delta(G)$ and $\chi(G)=r$, there is a subgraph of $H$ isomorphic to $G$.
