@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Embedding Lemma
 ---
 
 *Lemma.* Let $H$ be an $r$-partite graph with vertex classes $V_1,\ldots,V_r$ of size $an$. Suppose that if $U,U'$ include $\ge \alpha an$ vertices from two different vertex classes, then $\ge \varepsilon$ of the edges between $U$ and $U'$ occur in $E(H)$. 
