@@ -18,4 +18,5 @@ The following journals include combinatorial articles:
 * [Annals of Combinatorics](https://link.springer.com/journal/26/volumes-and-issues)
 * [Graphs and Combinatorics](https://link.springer.com/journal/373/volumes-and-issues)
 * [Ars Combinatoria](https://combinatorialpress.com/ars/)
+* [Art of Discrete and Applied Mathematics](https://adam-journal.eu/index.php/ADAM)
 * [Seminaire Lotharingien de Combinatoire](https://www.mat.univie.ac.at/~slc/)
