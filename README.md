@@ -3,3 +3,4 @@
 Helpful:
 * [journals for combinatorics](journals.md)
 * [how this website was made](howto.md)
+* [a pep talk on Olympiads](posts/olympiad.md)
