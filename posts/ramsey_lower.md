@@ -80,13 +80,13 @@ One eigenvector of $A$ is the vector of ones, with eigenvalue $\Delta$.
 Any other eigenvector is perpendicular to the vector of ones, and so its eigenvalue $\lambda$ satisfies $\lambda^2=q^{d-1}<\Delta$.
 
 Since $A'=A-\Delta n^{-1} J$ has eigenvalues $0$ and $\pm q^{\frac{d-1}{2}}$,
-multiplying by it increases the norm of a vector by at most a factor of $q^{\frac{d-1}{2}}$.
+multiplying by it increases the norm of a vector by at most a factor of $q^{\frac{d-1}{2}}\le \sqrt{\Delta}$.
 
 Let $U$ and $V$ be sets of points. Then $1_U^TA1_V$ is the number of edges from $U$ to $V$ with multiplicity. By Cauchy-Schwarz,
 
-$$\left|1_U^T\left(A-\Delta n^{-1} J\right)1_V\right|\le |1_U|_2\cdot |A'1_V|_2\le q^{\frac{d-1}{2}}\sqrt{|U||V|}.$$
+$$\left|1_U^T\left(A-\Delta n^{-1} J\right)1_V\right|\le |1_U|_2\cdot |A'1_V|_2\le \sqrt{\Delta|U||V|}.$$
 
-We deduce that the number of edges from $U$ to $V$ is between $\Delta n^{-1}\cdot |U||V|\pm \sqrt{\Delta|U||V|}$.
+Hence, the proportion of edges appearing between $U$ and $V$ is approximately $\frac{\Delta}{n}$.
 
 ## Counting forward independent $t$-tuples in $D$
 
