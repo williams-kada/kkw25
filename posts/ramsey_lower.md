@@ -86,7 +86,7 @@ Let $U$ and $V$ be sets of points. Then $1_U^TA1_V$ is the number of edges from 
 
 $$\left|1_U^T\left(A-\Delta n^{-1} J\right)1_V\right|\le |1_U|_2\cdot |A'1_V|_2\le q^{\frac{d-1}{2}}\sqrt{|U||V|}.$$
 
-We deduce that the number of edges from $U$ to $V$ differs from $\Delta n^{-1}\cdot |U||V|$ by at most $(\Delta\cdot  |U||V|)^{1/2}$.
+We deduce that the number of edges from $U$ to $V$ is between $\Delta n^{-1}\cdot |U||V|\pm \sqrt{\Delta|U||V|}$.
 
 ## Counting forward independent $t$-tuples in $D$
 
