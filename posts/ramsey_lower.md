@@ -110,8 +110,11 @@ Now suppose we are told in advance which indices are special.
 For non-special indices $i$, there are at most $\Delta n$ possible $(\mathbf{x}_i,\mathbf{z}_i)$ for any preceding vertices of $D$.
 For special indices $i$, however, there are at most $6n$ possible $(\mathbf{x}_i,\mathbf{z}_i)$, given the preceding vertices,
 because $\mathbf{z}_i$ is not orthogonal to $\mathbf{x}_j$ ($j=1,\ldots,i-1$) and $\mathbf{x}_i$ must be orthogonal to $\mathbf{z}_i$.
-Therefore, the number of such $t$-tuples is at most 
-$$6^{t-s}\Delta^s n^t\le (\Delta/6)^{2n\log n/\Delta+1} (6n)^t.$$
+Therefore, the number of such $t$-tuples is at most $6^{t-s}\Delta^s n^t\le (\Delta/6)^{2n\log n/\Delta+1} (6n)^t$.
+Since there are at most $2^t$ ways for the $t$ indices to be special or not, 
+the number of "forwards independent $t$-tuples" is at most
+
+$$(\Delta/6)^{2n\log n/\Delta+1} (12n)^t.$$
 
 ## The resulting lower bound
 
@@ -120,17 +123,17 @@ There will be no $K_{d+2}$, and the chance there will be an independent $K_t$ is
 
 Retaining a vertex with probability $p$ and then deleting a vertex from every independent $K_t$, an expected number of
 
-$$\ge p\cdot (\Delta n)-(\Delta/6)^{2n\log n/\Delta+1}(6epn/t)^t$$
+$$\ge p\cdot (\Delta n)-(\Delta/6)^{2n\log n/\Delta+1}(12epn/t)^t$$
 
 vertices remain with no $K_{d+2}$ or independent $K_t$. We specify $p$ so as to make the latter term $1$, guaranteeing 
 
-$$R(d+2,t)\ge p\Delta n=\frac{t\Delta}{6e(\Delta/6)^{(2n\log n/\Delta+1)/t}}.$$
+$$R(d+2,t)\ge p\Delta n=\frac{t\Delta}{12e(\Delta/6)^{(2n\log n/\Delta+1)/t}}.$$
 
 For $q\ge 8$, one can check that $2n\log n/\Delta+1\le 2(d+1)q\log q$. 
 Upon writing $q^{d-1}$ in the place of $\Delta$ and $\Delta/6$, the optimal value of $q$ as a real parameter satisfies $q(\log q)^2+2q\log q=\frac{t}{2(d+1)}$.
 Thus, let $k=d+2$, $\alpha k=t$ (where $\alpha\ge 35$), so that $q$ can be a power of $2$ such that $\frac14\alpha\le q(\log q)^2 \le \alpha$:
 
-$$R(k,\alpha k)\ge \frac{\alpha k q^{d-1}}{6e(q^{d-1}/4)^{2\frac{d+1}{t}q\log q}}\ge q^{(d-1)(1-2\alpha^{-1}q\log q)}\ge (e^{\log q-2})^{k-3}$$
+$$R(k,\alpha k)\ge \frac{\alpha k q^{d-1}}{12e(q^{d-1}/4)^{2\frac{d+1}{t}q\log q}}\ge q^{(d-1)(1-2\alpha^{-1}q\log q)}\ge (e^{\log q-2})^{k-3}$$
 
 where $q\ge \frac{\alpha}{4(\log \alpha)^2}$. Thus, we improved the probabilistic lower bound of roughly $(\sqrt \alpha)^k$ to roughly $\alpha^k$.
 
