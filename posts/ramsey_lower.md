@@ -119,7 +119,7 @@ $$(\Delta/6)^{2n\log n/\Delta+1} (12n)^t.$$
 ## The resulting lower bound
 
 In a uniformly random permutation of $D$'s vertices, join two vertices if their edge is from earlier to later vertex.
-There will be no $K_{d+2}$, and the chance there will be an independent $K_t$ is at most $\frac{6^{t-s}\Delta^s n^t}{t!}\le (\Delta/6)^{2n\log n/\Delta+1}(6en/t)^t$.
+There will be no $K_{d+2}$, and the chance there will be an independent $K_t$ is at most $\frac{(\Delta/6)^{2n\log n/\Delta+1} (12n)^t}{t!}\le (\Delta/6)^{2n\log n/\Delta+1}(12en/t)^t$.
 
 Retaining a vertex with probability $p$ and then deleting a vertex from every independent $K_t$, an expected number of
 
