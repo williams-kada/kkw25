@@ -57,9 +57,9 @@ Next, consider the *directed graph* $D$ where:
 
 In this context, our previous observation is equivalent to there being no transitive tournament of size $d+2$ in $D$.
 
-*Note.* Using energy-intensive computational technology, 
-an OpenAI team found that if the directed edges of $D$ are defined with a further constraint of $\langle \mathbf{x}',\mathbf{z}\rangle \neq 0$,
-then there is no transitive tournament of size $d+1$ in $D$. Using this version of $D$, they found the optimal base in the lower bound.
+*Remark.* Using an LLM and a data centre, 
+OpenAI found that if the directed edges of $D$ are defined with a further constraint of $\langle \mathbf{x}',\mathbf{z}\rangle \neq 0$,
+then there is no transitive tournament of size $d+1$ in $D$. Using this version of $D$, they found the optimal base in the lower bound for fixed $k$.
 
 ## A detour into spectral graph theory
 
@@ -119,7 +119,7 @@ $$(\Delta/6)^{2n\log n/\Delta+1} (12n)^t.$$
 ## The resulting lower bound
 
 In a uniformly random permutation of $D$'s vertices, join two vertices if their edge is from earlier to later vertex.
-There will be no $K_{d+2}$, and the chance there will be an independent $K_t$ is at most $\frac{(\Delta/6)^{2n\log n/\Delta+1} (12n)^t}{t!}\le (\Delta/6)^{2n\log n/\Delta+1}(12en/t)^t$.
+There will be no $K_{d+2}$, and the expected number of independent $K_t$ is at most $\frac{(\Delta/6)^{2n\log n/\Delta+1} (12n)^t}{t!}\le (\Delta/6)^{2n\log n/\Delta+1}(12en/t)^t$.
 
 Retaining a vertex with probability $p$ and then deleting a vertex from every independent $K_t$, an expected number of
 
@@ -129,13 +129,18 @@ vertices remain with no $K_{d+2}$ or independent $K_t$. We specify $p$ so as to 
 
 $$R(d+2,t)\ge p\Delta n=\frac{t\Delta}{12e(\Delta/6)^{(2n\log n/\Delta+1)/t}}.$$
 
-For $q\ge 8$, one can check that $2n\log n/\Delta+1\le 2(d+1)q\log q$. 
-Upon writing $q^{d-1}$ in the place of $\Delta$ and $\Delta/6$, the optimal value of $q$ as a real parameter satisfies $q(\log q)^2+2q\log q=\frac{t}{2(d+1)}$.
-Thus, let $k=d+2$, $\alpha k=t$ (where $\alpha\ge 35$), so that $q$ can be a power of $2$ such that $\frac14\alpha\le q(\log q)^2 \le \alpha$:
+For $q\ge 4$, $2n\log n/\Delta+1\le 2(d+1)q\log q$, because $\log n\le (d+1)\log q-\log(q-1)$ and $\frac{n}{\Delta}=\frac{q^{d+1}-1}{q^d-1}=q+\frac{q-1}{q^d-1}$.
 
-$$R(k,\alpha k)\ge \frac{\alpha k q^{d-1}}{12e(q^{d-1}/4)^{2\frac{d+1}{t}q\log q}}\ge q^{(d-1)(1-2\alpha^{-1}q\log q)}\ge (e^{\log q-2})^{k-3}$$
+Upon writing $q^{d-1}$ in the place of $\Delta$ and $\Delta/6$ a real parameter in the place of $q$, we can maximise our estimate by differentiating, which yields $q(\log q)^2+2q\log q=\frac{t}{2(d+1)}$. This motivates letting $q$ be a power of $2$ such that $\frac14\alpha\le q(\log q)^2 \le \alpha$, where $k=d+2$, $\alpha k=t$, and say, $\alpha\ge 35$.
 
-where $q\ge \frac{\alpha}{4(\log \alpha)^2}$. Thus, we improved the probabilistic lower bound of roughly $(\sqrt \alpha)^k$ to roughly $\alpha^k$.
+$$R(k,\alpha k)\ge \frac{\alpha k q^{d-1}}{12e(q^{d-1}/4)^{2\frac{d+1}{t}q\log q}}\ge q^{(d-1)(1-2\frac{d+1}{t}q\log q)}\ge (e^{\log q-2})^{k-3}$$
+
+where $q\ge \frac{\alpha}{4(\log \alpha)^2}$. Thus, if we think of $k,l\to \infty$ with $l/k\to \alpha$, the probabilistic lower bound of roughly $(\sqrt \alpha)^k$ is improved to nearly $\alpha^k$. If we think of $k$ as fixed, such as the $k=4$ studied by [Matheus and Verstraete](https://arxiv.org/abs/2306.04007), we obtain
+
+$$R(k,l)\ge \frac{l}{12e}\cdot q^{(k-3)(1-2\frac{k-1}{l}q\log q)}\ge 0.001 l q^{k-3}$$
+
+which, up to a constant depending on $k$, is $\frac{l^{k-2}}{(\log l)^{2k-6}}$. By induction, it is easy to check that $R(k,l)\le \binom{k+l-2}{l-1}$, so the best possible power of $l$ is $l^{k-1}$. As remarked, the state of the art is that $R(k,l)$ equals $l^{k-1}$ up to a polylogarithmic factor.
+
 
 
 
