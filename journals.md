@@ -11,6 +11,7 @@ The following journals include combinatorial articles:
 * [Electronic Journal of Combinatorics](https://www.combinatorics.org/): eclectic and public
 * [Journal of Combinatorial Designs](https://onlinelibrary.wiley.com/loi/15206610): for design theorists
 * [Enumerative Combinatorics and Applications](https://ecajournal.haifa.ac.il/#journal-archive): about enumerative formulas
+* [Congressus Numerantium](https://combinatorialpress.com/cn/)
 * [European Journal of Combinatorics](https://www.sciencedirect.com/journal/european-journal-of-combinatorics)
 * [Australasian Journal of Combinatorics](https://ajc.maths.uq.edu.au/)
 * [Journal of Graph Theory](https://onlinelibrary.wiley.com/loi/10970118)
